@@ -26,10 +26,8 @@ An app shows latest news feed
 
 - Added Collectionview to list feed in if the target device is an iPad
 
-**Features should have added if got more time**
-1. Implemented news details screen of each feed
-2. Added more tilter option other than type with separate sections for each filter type
-3. Added location along with date when diaplaying the feed
-4. Create separate sections for 
+## Screenshots
 
+
+<img width="346" alt="Screen Shot 2023-03-24 at 6 12 59 PM" src="https://user-images.githubusercontent.com/30163040/228371581-a956b1f9-3352-4b4f-8b7d-3ae589c63b42.png">                <img width="549" alt="Screen Shot 2023-03-24 at 6 13 39 PM" src="https://user-images.githubusercontent.com/30163040/228371605-b8acb428-b41a-4488-8e1a-8a158c9a96a3.png">
 
