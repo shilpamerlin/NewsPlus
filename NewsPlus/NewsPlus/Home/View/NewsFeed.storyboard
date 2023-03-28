@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="99l-XD-bXN">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--News Feed View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="NewsFeedViewController" customModule="CBCNewsFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="HHt-jJ-NQd">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <color key="backgroundColor" name="CBC_Background_Color"/>
+                            </tableView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CJd-Gw-SP5">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="818"/>
+                                <color key="backgroundColor" name="CBC_Background_Color"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="dVl-3C-zfZ">
+                                    <size key="itemSize" width="300" height="350"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <constraints>
+                            <constraint firstItem="CJd-Gw-SP5" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="4Oj-J2-9uj"/>
+                            <constraint firstItem="CJd-Gw-SP5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="AqB-V1-RWf"/>
+                            <constraint firstItem="HHt-jJ-NQd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="FUL-LN-YAw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="HHt-jJ-NQd" secondAttribute="trailing" id="KJH-Ny-X2X"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="HHt-jJ-NQd" secondAttribute="bottom" id="bUt-vk-OZt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="CJd-Gw-SP5" secondAttribute="bottom" id="kSP-VJ-Cso"/>
+                            <constraint firstItem="HHt-jJ-NQd" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="lTl-R0-Zfx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="CJd-Gw-SP5" secondAttribute="trailing" id="vni-YV-fI9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pcU-X1-yHQ"/>
+                    <connections>
+                        <outlet property="feedCollectionView" destination="CJd-Gw-SP5" id="xul-fH-Qn9"/>
+                        <outlet property="newsFeedTableView" destination="HHt-jJ-NQd" id="jZK-ap-TB6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1874.0458015267175" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pIE-WE-bHH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="99l-XD-bXN" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DNg-Un-Txv">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hzN-v8-F9y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VgZ-WP-bPs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.32824427480909" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="CBC_Background_Color">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
