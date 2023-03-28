@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="NewsFeedCollectionCell" id="gTV-IL-0wX" customClass="NewsFeedCollectionCell" customModule="CBCNewsFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="506" height="350"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="506" height="350"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e7z-6G-cAg">
+                        <rect key="frame" x="0.0" y="0.0" width="506" height="350"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a27-9L-6As">
+                                <rect key="frame" x="10" y="10" width="486" height="330"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Tss-FE-9WX">
+                                        <rect key="frame" x="0.0" y="0.0" width="486" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="jXj-xb-YK3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nCP-n5-tkq">
+                                        <rect key="frame" x="18" y="220" width="468" height="55.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvm-JG-PSR">
+                                                <rect key="frame" x="0.0" y="0.0" width="468" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLZ-yn-7tX">
+                                                <rect key="frame" x="0.0" y="36.666666666666686" width="468" height="18.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nCP-n5-tkq" secondAttribute="trailing" id="BsV-Fe-913"/>
+                                    <constraint firstItem="Tss-FE-9WX" firstAttribute="leading" secondItem="a27-9L-6As" secondAttribute="leading" id="Qo2-iY-69P"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tss-FE-9WX" secondAttribute="trailing" id="VXO-Aq-Xap"/>
+                                    <constraint firstItem="nCP-n5-tkq" firstAttribute="leading" secondItem="a27-9L-6As" secondAttribute="leading" constant="18" id="eT7-wW-pJz"/>
+                                    <constraint firstItem="Tss-FE-9WX" firstAttribute="top" secondItem="a27-9L-6As" secondAttribute="top" id="fxA-qJ-Yy9"/>
+                                    <constraint firstItem="nCP-n5-tkq" firstAttribute="top" secondItem="Tss-FE-9WX" secondAttribute="bottom" constant="20" id="mG2-la-h3s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="CBC_Background_Color"/>
+                        <constraints>
+                            <constraint firstItem="a27-9L-6As" firstAttribute="top" secondItem="e7z-6G-cAg" secondAttribute="top" constant="10" id="02a-gK-GLo"/>
+                            <constraint firstItem="a27-9L-6As" firstAttribute="leading" secondItem="e7z-6G-cAg" secondAttribute="leading" constant="10" id="3qt-zP-5tD"/>
+                            <constraint firstAttribute="trailing" secondItem="a27-9L-6As" secondAttribute="trailing" constant="10" id="KxA-dv-EXi"/>
+                            <constraint firstAttribute="bottom" secondItem="a27-9L-6As" secondAttribute="bottom" constant="10" id="z4X-ai-kPO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" name="CBC_Background_Color"/>
+            <constraints>
+                <constraint firstItem="e7z-6G-cAg" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="25F-we-Xcz"/>
+                <constraint firstAttribute="bottom" secondItem="e7z-6G-cAg" secondAttribute="bottom" id="58R-Gy-Rf5"/>
+                <constraint firstItem="e7z-6G-cAg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NOY-RF-lW7"/>
+                <constraint firstAttribute="trailing" secondItem="e7z-6G-cAg" secondAttribute="trailing" id="Wqp-nl-Yim"/>
+            </constraints>
+            <connections>
+                <outlet property="containerView" destination="a27-9L-6As" id="iSr-pz-zPm"/>
+                <outlet property="newsFeedImageView" destination="Tss-FE-9WX" id="Ged-aY-AV6"/>
+                <outlet property="newsFeedPublishDate" destination="gLZ-yn-7tX" id="9nd-M8-acs"/>
+                <outlet property="newsFeedTitle" destination="bvm-JG-PSR" id="EBC-7q-wTg"/>
+            </connections>
+            <point key="canvasLocation" x="36" y="21"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="CBC_Background_Color">
+            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
